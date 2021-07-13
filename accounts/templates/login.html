@@ -1,0 +1,33 @@
+<html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+    <body>
+
+      <form action="" method="post" class="box">
+      {% csrf_token %}
+      
+        <h1>Login</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span></legend>
+          <label for="name">Userame:</label>
+          <input type="text" id="name" name="username">
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password1">
+          
+        </fieldset>
+        <button type="submit">Login</button>
+      </form>
+      <div class="box">
+        {% for messge in messages %}
+          <h4>{{messge}}</h4>
+        {% endfor %}
+      </div>
+      
+    </body>
+</html>

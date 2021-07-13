@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>home</title>
+</head>
+<body>
+    <h4>HELLO WORLD</H4>
+   
+     {% if user.is_authenticated %} 
+      <h4> Hai {{user.username}}</h4> 
+     <a href="{% url 'account_app:logout' %}">logout</a>
+     {% else %}
+      <a href="{% url 'account_app:register' %}">Register</a> | <a href="{% url 'account_app:login' %}">login</a>
+     {% endif %}
+</body>
+</html>
